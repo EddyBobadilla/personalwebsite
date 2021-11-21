@@ -1,0 +1,180 @@
+html {
+    background-color: white;
+    color: black;
+    width: 100%;
+}
+
+header {
+    background: #35424a;
+    border-bottom: black solid 4px;
+    position: relative;
+}
+
+h1{
+    font-family: Jost;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 64px;
+    line-height: 56px;
+    border-style: solid;
+    border-color: black;
+    margin-bottom: 0px;
+    padding: 5px;
+    text-align: center;
+}
+
+h2 {
+    font-family: Jost;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 56px;
+    line-height: 56px;
+    border-style: solid;
+    border-color: black;
+    margin-top: 0px;
+    padding: 5px;
+    text-align: center;
+}
+
+nav {
+   display: inline-block;
+   border-color: blue;
+   border-width: 2px;
+   text-align: center;
+    
+}
+
+
+.navbar a {
+   color: white;
+   padding: 2px;
+   font-size: 16px;
+   text-decoration: none;
+   text-transform: uppercase;
+   border-style: solid;
+   border-color: black;
+   text-align: center;
+   
+}
+
+nav a:hover {
+    font-size: 18px;
+    
+}
+
+.container {
+    width: 100%;
+    margin: auto;
+    overflow: hidden;
+}
+
+header ul {
+    margin: 0;
+    padding: 0;
+}
+
+
+header li {
+    margin-left: 200px;
+    padding-bottom: 100px;
+    display: inline;
+    padding: 0 20px 0 20px;
+}
+
+h3 {
+    font-family: Jost;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 48px;
+    line-height: 142%;
+    
+}
+
+h4 {
+    font-family: Roboto, Times, serif;
+    font-weight: bold;
+    font-size: 36px;
+}
+
+p {
+    font-family: Roboto, Times, serif;
+    font-size: 16px;
+}
+
+
+#aboutmeparagraph {
+    border-style: solid;
+    border-color: white;
+    padding: 5px;
+    width: 300px;
+    
+}
+
+.skills img {
+    height: 250px;
+    width: auto;
+    display: inline;
+}
+
+.about {
+    border-color: white;
+    border-style: solid;
+    border-width: 4px;
+    position: relative;
+    text-align: left;
+    
+}
+
+.about img {
+    border-radius: 20px;
+}
+
+.projects {
+    display: grid;
+    background: #35424a;
+    color: white;
+    padding-bottom: 20px;
+    border-radius: 5%;
+    text-align: center;
+    text-decoration: none;
+    
+}
+#projects li {
+    list-style-type: none;
+}
+.projects img {
+    width: 300px;
+    height: auto;
+}
+
+.projects img:hover {
+    width: 350px;
+    height: auto;
+}
+
+.projects ul li {
+    text-decoration: none;
+}
+
+.weblogo, .reactredux, .git {
+    border-style: solid;
+    border-color: black;
+    border-width: 2px;
+    padding: 4px;
+}
+
+.skills {
+    text-align: center;
+}
+
+.skills img:hover {
+    height: 275px;
+    width: auto;
+    
+}
+
+footer {
+    background: #35424a;
+    color: white;
+    text-align: center;
+}

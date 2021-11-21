@@ -2,28 +2,73 @@
 <html>
     <head>
         <title>Eddy Bobadilla | Front-End Developer</title>
-        <link href="PortfolioWebsiteCss.css" rel="stylesheet">
-        <script src="PortfolioWebsiteJS.js"></script>
-        <meta name="viewport" content="width=device-width, initial-scale=1.0"
+        <link href="style.css" rel="stylesheet">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="Eddy Bobadilla Portfolio">
+        <meta name="keywords" content="Eddy Bobadilla, Eduardo Bobadilla, Eddie Bobadilla, web developer, front-end developer, junior front-end developer, junior web developer, html, css, javascript, react, redux, git, github, resume, projects">
+        <meta name="author" content="Eddy Bobadilla">
     </head>
     <body>
     <header>
-        <h1>Eddy Bobadilla</h1>
-        <h2>Front-End Developer</h2>
-        <nav>
-            <ul>
-                <li>About Me</li>
-                <li>Projects</li>
-                <li>Skills</li>
-                <li>Contact</li>
-            </ul>
-        </nav>
+        <div class="container">
+            <h1>Eddy Bobadilla</h1>
+            <h2>Front-End Developer</h2>
+            <nav class="navbar">
+                <ul>
+                    <li><a href="#about">About Me</a></li>
+                    <li><a href="#projects">Projects</a></li>
+                    <li><a href="#skills">Skills</a></li>
+                    <li><a href="#contact">Contact</a></li>
+            </nav>
+        </div>      
     </header>
     <main>
+        <div class="container">
+        <div id="about" class="about">
+            <h3>About Me</h3>
+            <img src="ProfilePic.jpg">
+            <p id="aboutmeparagraph">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam elementum cursus pellentesque. Aliquam in nulla mollis, rutrum enim et, bibendum felis. Sed interdum elit felis, nec eleifend ex bibendum in. Nulla lectus tortor, gravida vel nunc quis, aliquet volutpat nibh. Aenean nec tempus diam, molestie malesuada purus. In hac habitasse platea dictumst. Suspendisse augue ipsum, lacinia quis arcu quis, pellentesque tristique leo. Etiam ut sem erat.</p>
+        </div>
+        </div>
+        <div id="projects" class="projects">
+            <h3>Projects</h3>
+            <ul>
+                <li id="reddit">
+                    <h4>Reddit Client</h4>
+                    <img src="reddit.jpg">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean lectus ex, pellentesque non mattis non, lacinia vel nunc. Aliquam in.</p>
+                </li>
+                <li id="foodweb">
+                    <h4>Food Website</h4>
+                    <img src="foodweb.jpg">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean lectus ex, pellentesque non mattis non, lacinia vel nunc. Aliquam in.</p>
+                </li>
+                <li id="workhardweb">
+                    <h4>Work Hard Website</h4>
+                    <img src="workhardweb.jpg">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean lectus ex, pellentesque non mattis non, lacinia vel nunc. Aliquam in.</p>
+                </li>
+            </ul>
+        </div>
+        <div id="skills" class="skills">
+            <h3>Skills</h3>
+            <img class="weblogo" src="html-js-css-logo.png">
+            <img class="reactredux" src="ReactRedux.png">
+            <img class="git" src="git-logo.png">
+        </div>
+        </div>      
 
     </main>
     <footer>
-
+        <h3 id="contact" class="contact">Contact</h3>
+        <p>EddyBobadilla@Gmail.com | (424) 421-4443 | Linkedin: Eddy Bobadilla | GitHub: Eddy Bobaadilla</p>
     </footer>
+    <script src="script.js"></script>
     </body>
 </html>
