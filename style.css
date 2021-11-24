@@ -22,6 +22,16 @@
     
 }
 
+h1 {
+    font-size: 48px;
+}
+
+h2 {
+    font-size: 36px;
+    position: relative;
+    bottom: 50px;
+}
+
 h3 {
     font-size: 29px;
 }
@@ -31,15 +41,16 @@ h4 {
 }
 
 #logo {
-    width: 40px;
+    width: 75px;
     height: auto;
+    float: left;
+    
     
 }
 
 nav {
     grid-area: nav;
     text-align: center;
-    border: solid black;
     
 }
 
@@ -62,6 +73,19 @@ nav li a {
 nav label {
    float: right;
    bottom: 70px;
+}
+
+span img {
+    width: 25px;
+    height: auto;
+    position: relative;
+    top: 4px;
+    right: 2px;
+}
+
+#sun {
+    position: relative;
+    right: 1px;
 }
 
 .switch {
@@ -171,6 +195,7 @@ header {
     width: 250px;
     height: auto;
     cursor: pointer;
+    filter: blur(5px);
 }
 
 #project2 {
@@ -193,6 +218,7 @@ header {
     width: 250px;
     height: auto;
     cursor: pointer;
+    filter: blur(5px);
 }
 
 #project3 {
@@ -215,6 +241,7 @@ header {
     width: 250px;
     height: auto;
     cursor: pointer;
+    filter: blur(5px);
 }
 
 #skills {
@@ -235,6 +262,7 @@ header {
 .weblogo:hover {
     width: 250px;
     height: auto;
+    
 }
 
 .reactredux{
@@ -288,7 +316,19 @@ footer {
             "footer";
     }
 
-    #skills {
+    nav {
+        width: 300px;
+    }
 
+    #logo {
+        visibility: hidden;
+    }
+    #skillimages {
+        text-align: center;
+    }
+
+    footer {
+        width: 400px;
+        
     }
 }
