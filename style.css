@@ -1,180 +1,294 @@
-html {
-    background-color: white;
+* {
+    font-family: Jost, 'Times New Roman', serif;
     color: black;
-    width: 100%;
-}
-
-header {
-    background: #35424a;
-    border-bottom: black solid 4px;
-    position: relative;
-}
-
-h1{
-    font-family: Jost;
-    font-style: normal;
-    font-weight: bold;
-    font-size: 64px;
-    line-height: 56px;
-    border-style: solid;
-    border-color: black;
-    margin-bottom: 0px;
-    padding: 5px;
-    text-align: center;
-}
-
-h2 {
-    font-family: Jost;
-    font-style: normal;
-    font-weight: normal;
-    font-size: 56px;
-    line-height: 56px;
-    border-style: solid;
-    border-color: black;
-    margin-top: 0px;
-    padding: 5px;
-    text-align: center;
-}
-
-nav {
-   display: inline-block;
-   border-color: blue;
-   border-width: 2px;
-   text-align: center;
     
 }
-
-
-.navbar a {
-   color: white;
-   padding: 2px;
-   font-size: 16px;
-   text-decoration: none;
-   text-transform: uppercase;
-   border-style: solid;
-   border-color: black;
-   text-align: center;
-   
-}
-
-nav a:hover {
-    font-size: 18px;
-    
-}
-
 .container {
-    width: 100%;
-    margin: auto;
-    overflow: hidden;
-}
-
-header ul {
-    margin: 0;
-    padding: 0;
-}
-
-
-header li {
-    margin-left: 200px;
-    padding-bottom: 100px;
-    display: inline;
-    padding: 0 20px 0 20px;
+    display: grid;
+    height: 100vh;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 0.2fr 1fr 1.5fr 1fr 1.5fr 1fr .5fr 1fr;
+    grid-template-areas: 
+        "nav nav nav"
+        "header header header"
+        "about about about"
+        "projects projects projects"
+        "project1 project2 project3"
+        "skills skills skills"
+        "skillimages skillimages skillimages"
+        "footer footer footer";
+    grid-gap: .2rem;
+    color: white;
+    
 }
 
 h3 {
-    font-family: Jost;
-    font-style: normal;
-    font-weight: bold;
-    font-size: 48px;
-    line-height: 142%;
-    
+    font-size: 29px;
 }
 
 h4 {
-    font-family: Roboto, Times, serif;
-    font-weight: bold;
-    font-size: 36px;
+    font-size: 20px;
 }
 
-p {
-    font-family: Roboto, Times, serif;
-    font-size: 16px;
-}
-
-
-#aboutmeparagraph {
-    border-style: solid;
-    border-color: white;
-    padding: 5px;
-    width: 300px;
+#logo {
+    width: 40px;
+    height: auto;
     
 }
 
-.skills img {
-    height: 250px;
-    width: auto;
-    display: inline;
-}
-
-.about {
-    border-color: white;
-    border-style: solid;
-    border-width: 4px;
-    position: relative;
-    text-align: left;
-    
-}
-
-.about img {
-    border-radius: 20px;
-}
-
-.projects {
-    display: grid;
-    background: #35424a;
-    color: white;
-    padding-bottom: 20px;
-    border-radius: 5%;
+nav {
+    grid-area: nav;
     text-align: center;
-    text-decoration: none;
+    border: solid black;
     
 }
-#projects li {
-    list-style-type: none;
-}
-.projects img {
-    width: 300px;
-    height: auto;
+
+nav li {
+    display: inline;
+    text-align: relative;
+   
 }
 
-.projects img:hover {
-    width: 350px;
-    height: auto;
-}
-
-.projects ul li {
+nav li a {
+    border: solid black;
+    padding: 0px 10px 0px 10px;
+    margin: 0px 10px 0px 10px;
     text-decoration: none;
+    text-transform: uppercase;
+    font-weight: bold;
+   
 }
+
+nav label {
+   float: right;
+   bottom: 70px;
+}
+
+.switch {
+    position: relative; 
+    display: inline-block;
+    width: 60px;
+    height: 34px;
+    text-align: right;
+}
+
+.switch input {
+    opacity: 0;
+    width: 0;
+    height: 0; 
+}
+
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background-color: #CCC;
+    -webkit-transition: .2s;
+}
+
+.slider::before {
+    position: absolute;
+    content: "";
+    height: 26px; 
+    width: 26px;
+    left: 4px; 
+    bottom: 4px; 
+    background-color: white;
+    -webkit-transition: .2s;
+    transition: .2s;
+}
+
+input:checked + .slider {
+    box-shadow: 0 0 1px black;
+}
+
+input:focus + .slider::before {
+    -webkit-transform: translateX(26px);
+    -ms-transform: translateX(26px);
+    transform: translateX(26px);
+}
+
+.slider.round {
+    border-radius: 34px;
+}
+
+.slider.round::before {
+    border-radius: 50%;
+}
+
+header {
+    grid-area: header;
+    text-align: center;
+    border-radius: 2%;
+}
+
+#about {
+    grid-area: about;
+    text-align: center;
+}
+
+#about p {
+    width: 850px;
+    text-align: justify;
+    margin: auto;
+    font-size: 24px;
+    padding-bottom: 40px;
+    padding-top: 40px;
+}
+
+#about img {
+    width: 400px;
+    height: auto;
+    border-radius: 50%;
+    padding-top: 40px;
+}
+
+#projects {
+    grid-area: projects;
+    text-align: center;
+}
+
+#project1 {
+    grid-area: project1;
+    text-align: center;
+}
+
+#project1 p {
+    width: 200px;
+    text-align: justify;
+    margin: auto;
+}
+
+#project1 img {
+    width: 200px;
+    height: auto;
+}
+
+#project1 img:hover {
+    width: 250px;
+    height: auto;
+    cursor: pointer;
+}
+
+#project2 {
+    grid-area: project2;
+    text-align: center;
+}
+
+#project2 p {
+    width: 200px;
+    text-align: justify;
+    margin: auto;
+}
+
+#project2 img {
+    width: 200px;
+    height: auto;
+}
+
+#project2 img:hover {
+    width: 250px;
+    height: auto;
+    cursor: pointer;
+}
+
+#project3 {
+    grid-area: project3;
+    text-align: center;
+}
+
+#project3 p {
+    width: 200px;
+    text-align: justify;
+    margin: auto;
+}
+
+#project3 img {
+    width: 200px;
+    height: auto;
+}
+
+#project3 img:hover {
+    width: 250px;
+    height: auto;
+    cursor: pointer;
+}
+
+#skills {
+    text-align: center;
+}
+
+#skillimages {
+    grid-area: skills;
+    text-align: center;
+}
+
+
+.weblogo {
+    width: 200px;
+    height: auto;
+}
+
+.weblogo:hover {
+    width: 250px;
+    height: auto;
+}
+
+.reactredux{
+    width: 240px;
+    height: auto;
+}
+
+.reactredux:hover{
+    width: 290px; 
+    height: auto;
+}
+
+.git {
+    width: 215px;
+    height: auto;
+}
+
+.git:hover {
+    width: 265px;
+    height: auto;
+}
+
 
 .weblogo, .reactredux, .git {
-    border-style: solid;
-    border-color: black;
-    border-width: 2px;
-    padding: 4px;
-}
-
-.skills {
-    text-align: center;
-}
-
-.skills img:hover {
-    height: 275px;
-    width: auto;
+    border: solid black;
+    padding: 5px;
     
 }
 
 footer {
-    background: #35424a;
-    color: white;
+    grid-area: footer;
     text-align: center;
+    padding-bottom: 20px;
+    font-weight: bold;
+}
+
+@media only screen and (max-width: 800px) {
+    .container{
+        grid-template-columns: 1fr; 
+        grid-template-rows: 0.2fr 1fr 1.5fr 1fr 1fr 1fr 1fr 1fr .5fr 1fr;
+        grid-template-areas: 
+            "nav"
+            "header"
+            "about"
+            "projects"
+            "project1"
+            "project2"
+            "project3"
+            "skills"
+            "skillimages"
+            "footer";
+    }
+
+    #skills {
+
+    }
 }
