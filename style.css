@@ -1,7 +1,6 @@
 * {
     font-family: Jost, 'Times New Roman', serif;
-    color: black;
-    
+    color: black; 
 }
 .container {
     display: grid;
@@ -21,6 +20,7 @@
     color: white;
     
 }
+
 
 h1 {
     font-size: 48px;
@@ -44,8 +44,6 @@ h4 {
     width: 75px;
     height: auto;
     float: left;
-    
-    
 }
 
 nav {
@@ -54,19 +52,21 @@ nav {
     
 }
 
+nav ul {
+    text-align: center;
+}
+
 nav li {
-    display: inline;
-    text-align: relative;
-   
+    display: inline-block;
+    text-align: center;
 }
 
 nav li a {
-    border: solid black;
     padding: 0px 10px 0px 10px;
     margin: 0px 10px 0px 10px;
-    text-decoration: none;
     text-transform: uppercase;
     font-weight: bold;
+    text-align: center;
    
 }
 
@@ -111,6 +111,7 @@ span img {
     right: 0;
     background-color: #CCC;
     -webkit-transition: .2s;
+    transition: .2s;
 }
 
 .slider::before {
@@ -245,12 +246,16 @@ header {
 }
 
 #skills {
+    grid-area: skills;
     text-align: center;
+    justify-content: center;
 }
 
 #skillimages {
-    grid-area: skills;
+    grid-area: skillimages;
     text-align: center;
+    position: relative;
+    justify-content: center;
 }
 
 
@@ -287,8 +292,7 @@ header {
 
 
 .weblogo, .reactredux, .git {
-    border: solid black;
-    padding: 5px;
+    padding: 20px;
     
 }
 
@@ -302,7 +306,7 @@ footer {
 @media only screen and (max-width: 800px) {
     .container{
         grid-template-columns: 1fr; 
-        grid-template-rows: 0.2fr 1fr 1.5fr 1fr 1fr 1fr 1fr 1fr .5fr 1fr;
+        grid-template-rows: 1fr 1fr 1.5fr 1fr 1fr 1fr 1fr 1fr .5fr 1fr;
         grid-template-areas: 
             "nav"
             "header"
@@ -316,19 +320,35 @@ footer {
             "footer";
     }
 
-    nav {
-        width: 300px;
+    h1 {
+        margin-top: 25px;
+    }
+
+    nav ul {
+        width: 130px;
+        position: relative;
+        left: 25%;
+    }
+
+    nav li {
+        margin-bottom: 20px; 
+    }
+
+    ul li a {
+      margin-bottom: 20px;
     }
 
     #logo {
-        visibility: hidden;
-    }
-    #skillimages {
-        text-align: center;
+        display: relative;
+        margin-top: 20px;
     }
 
     footer {
-        width: 400px;
-        
+        font-size: 18px;
     }
+
+    #about p {
+        width: 400px;
+    }
+
 }
