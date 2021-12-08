@@ -182,7 +182,7 @@ header {
 }
 
 #project1 p {
-    width: 200px;
+    width: 300px;
     text-align: justify;
     margin: auto;
 }
@@ -205,7 +205,7 @@ header {
 }
 
 #project2 p {
-    width: 200px;
+    width: 300px;
     text-align: justify;
     margin: auto;
 }
@@ -228,7 +228,7 @@ header {
 }
 
 #project3 p {
-    width: 200px;
+    width: 300px;
     text-align: justify;
     margin: auto;
 }
@@ -301,6 +301,10 @@ footer {
     text-align: center;
     padding-bottom: 20px;
     font-weight: bold;
+}
+
+#contact {
+    cursor: pointer;
 }
 
 @media only screen and (max-width: 800px) {
